@@ -1,0 +1,30 @@
+html,body{
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.mainapp{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+}
+header{
+    flex-shrink: 0;
+    justify-content: space-between;
+}
+main{
+    overflow-y: auto;
+    flex: 1;
+}
+footer{
+    flex-shrink: 0;
+    align-items: flex-end;
+    gap: 10px;
+    padding: 10px;
+    display: flex;
+}
