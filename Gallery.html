@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Gallery</title>
+    <style>
+        /* CORE BACKGROUND & STYLING */
+            html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #0b141a;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url(Gallery/S&J.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #e9edef;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            min-height: 100vh;
+        }
+
+        /* HEADER SETUP */
+        header {
+            text-align: center;
+            padding: 40px 20px 20px 20px;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.4), transparent);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.2rem;
+            font-weight: 400;
+            letter-spacing: 1px;
+        }
+
+        header p {
+            margin: 10px 0 0 0;
+            color: #8696a0;
+            font-size: 0.95rem;
+        }
+
+        /* RESPONSIVE PHOTO GRID COMPONENT */
+        .gallery-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: grid;
+            /* Auto-fit creates columns dynamically based on available screen space */
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 16px; /* Smooth spacing between images */
+        }
+
+        /* INDIVIDUAL PHOTO CARDS */
+        .photo-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            background-color: #202c33;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            aspect-ratio: 1 / 1; /* Forces square tiles like Instagram */
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .photo-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Prevents stretching by scaling and cropping cleanly */
+            display: block;
+            transition: transform 0.4s ease;
+        }
+
+        /* SMOOTH HOVER EFFECTS */
+        .photo-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+        }
+
+        .photo-item:hover img {
+            transform: scale(1.06); /* Micro-interaction scale zoom effect */
+        }
+
+        /* FOOTER OR BACK BUTTON */
+        .nav-footer {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .back-btn {
+            color: #fff;
+            text-decoration: none;
+            font-size: 0.95rem;
+            border: 1px solid #ff4500;
+            padding: 10px 20px;
+            border-radius: 20px;
+            transition: background 0.2s ease;
+        }
+
+        .back-btn:hover {
+            background-color: rgba(255, 69, 0, 1);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Our Shared Moments</h1>
+    </header>
+
+    <!-- PHOTO GALLERY GRID CONTAINER -->
+    <main class="gallery-container">
+        
+        <!-- Photo Item 1 -->
+        <div class="photo-item">
+            <img src="Gallery/Usss.png" alt="Memory 1">
+        </div>
+
+        <!-- Photo Item 2 -->
+        <div class="photo-item">
+            <img src="Gallery/gtaIVus.jpg" alt="Memory 2">
+        </div>
+
+        <!-- Photo Item 3 -->
+        <div class="photo-item">
+            <img src="Gallery/gtaSAus.jpg" alt="Memory 3">
+        </div>
+
+        
+        <div class="photo-item">
+            <img src="Gallery/gtaviUs.png" alt="Memory 4">
+        </div>
+
+        
+        <div class="photo-item">
+            <img src="Gallery/TnDbag.png" alt="Memory 5">
+        </div>
+
+        
+        <div class="photo-item">
+            <img src="Gallery/S&Rf.png" alt="Memory 6">
+        </div>
+        
+        <div class="photo-item">
+            <img src="Gallery/1stDate.jpeg" alt="Memory 7">
+        </div>
+
+        <div class="photo-item">
+            <img src="Gallery/2ndDate.jpeg" alt="Memory 8">
+        </div>
+        <div class="photo-item">
+            <img src="Gallery/ChurchDate.jpeg" alt="Memory 9">
+        </div>
+    </main>
+
+    <div class="nav-footer">
+        <a href="index.html" class="back-btn">← Back to Chat</a>
+    </div>
+
+</body>
+</html>
